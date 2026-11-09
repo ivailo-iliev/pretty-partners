@@ -1,15 +1,8 @@
-# PrettyPartners website
+# PrettyPartners website — moved
 
-Customer-facing website only. Administration, native Auth, tenant accounts,
-schema migrations and referral accounting belong to `ivailo-iliev/pretty-pencil`.
+The prettypartners.app website, including the `/p/<alias>` coupon page, now lives in
+`ivailo-iliev/pretty-pencil` under `marketing/partners/` and shares the Pretty Pencil
+marketing code, styles and fonts. The Netlify project `pretty-partners` deploys from
+that repository with base directory `marketing/partners`.
 
-`https://prettypartners.app/p/<12-character-alias>` renders a public coupon using
-the existing Supabase project's narrow `pretty_partner_offer_short` RPC. It uses
-only the publishable browser key, never stores a login session, and never receives
-customer names, contacts or commissions. Public validity is rechecked on load;
-the merchant must still redeem through Pretty Pencil. Existing UUID links remain
-working in Pretty Pencil. Code aliases are generated once in the shared database.
-
-Run `npm test` and `node build.mjs`. Netlify deploys `dist` from this repository.
-The root landing page is still a placeholder; rebuilding the legacy marketing
-site is separate from the short-link change.
+This repository is no longer deployed and can be archived.
